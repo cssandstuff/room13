@@ -28,7 +28,7 @@
 		];
 
 
-	let confetti = new Array(40).fill()
+	let confetti = new Array(28).fill()
 		.map((_, i) => {
 			return {
 				character: emoji[i % emoji.length] + characters[i % characters.length],
@@ -48,7 +48,7 @@
 			frame = requestAnimationFrame(loop);
 
 			confetti = confetti.map(emoji => {
-				emoji.y += 0.7 * emoji.r;
+				emoji.y += 0.6 * emoji.r;
 				if (emoji.y > 130) emoji.y = -130;
 				return emoji;
 			});

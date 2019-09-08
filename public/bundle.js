@@ -283,8 +283,8 @@ var app = (function () {
     			t = text(t_value);
     			set_style(span, "transform", "translateX(" + ctx.c.x + "vw) translateY(" + ctx.c.y + "vh) translateZ(" + ctx.c.z + "px) rotateZ(" + ctx.c.y/300 * 90 + "deg) rotateX(" + ctx.c.y/100 * 90 + "deg) scale(" + ctx.c.s + ")");
     			set_style(span, "opacity", ctx.c.y / 20);
-    			attr(span, "class", "svelte-iuhgmc");
-    			add_location(span, file, 111, 1, 2025);
+    			attr(span, "class", "svelte-1ujmgtf");
+    			add_location(span, file, 111, 1, 2017);
     		},
 
     		m: function mount(target, anchor) {
@@ -332,10 +332,10 @@ var app = (function () {
     			for (var i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			attr(h1, "class", "svelte-iuhgmc");
-    			add_location(h1, file, 109, 0, 1974);
-    			attr(div, "class", "threeD svelte-iuhgmc");
-    			add_location(div, file, 108, 0, 1953);
+    			attr(h1, "class", "svelte-1ujmgtf");
+    			add_location(h1, file, 109, 0, 1966);
+    			attr(div, "class", "threeD svelte-1ujmgtf");
+    			add_location(div, file, 108, 0, 1945);
     		},
 
     		l: function claim(nodes) {
@@ -416,7 +416,7 @@ var app = (function () {
     		];
 
 
-    	let confetti = new Array(40).fill()
+    	let confetti = new Array(28).fill()
     		.map((_, i) => {
     			return {
     				character: emoji[i % emoji.length] + characters[i % characters.length],
@@ -436,7 +436,7 @@ var app = (function () {
     			frame = requestAnimationFrame(loop);
 
     			$$invalidate('confetti', confetti = confetti.map(emoji => {
-    				emoji.y += 0.7 * emoji.r;
+    				emoji.y += 0.6 * emoji.r;
     				if (emoji.y > 130) emoji.y = -130;
     				return emoji;
     			}));
