@@ -273,7 +273,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (103:0) {#each confetti as c}
+    // (105:0) {#each confetti as c}
     function create_each_block(ctx) {
     	var span, t_value = ctx.c.character + "", t;
 
@@ -281,10 +281,10 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			t = text(t_value);
-    			set_style(span, "transform", "translateX(" + ctx.c.x + "vw) translateY(" + ctx.c.y + "vh) translateZ(" + ctx.c.y + "vh) rotateZ(" + ctx.c.y/300 * 90 + "deg) rotateX(" + ctx.c.y/100 * 90 + "deg) scale(" + ctx.c.s + ")");
+    			set_style(span, "transform", "translateX(" + ctx.c.x + "vw) translateY(" + ctx.c.y + "vh) translateZ(" + ctx.c.z + "px) rotateZ(" + ctx.c.y/300 * 90 + "deg) rotateX(" + ctx.c.y/100 * 90 + "deg) scale(" + ctx.c.s + ")");
     			set_style(span, "opacity", ctx.c.y / 20);
-    			attr(span, "class", "svelte-16wjkl6");
-    			add_location(span, file, 103, 1, 1863);
+    			attr(span, "class", "svelte-lnfmp3");
+    			add_location(span, file, 105, 1, 1915);
     		},
 
     		m: function mount(target, anchor) {
@@ -298,7 +298,7 @@ var app = (function () {
     			}
 
     			if (changed.confetti) {
-    				set_style(span, "transform", "translateX(" + ctx.c.x + "vw) translateY(" + ctx.c.y + "vh) translateZ(" + ctx.c.y + "vh) rotateZ(" + ctx.c.y/300 * 90 + "deg) rotateX(" + ctx.c.y/100 * 90 + "deg) scale(" + ctx.c.s + ")");
+    				set_style(span, "transform", "translateX(" + ctx.c.x + "vw) translateY(" + ctx.c.y + "vh) translateZ(" + ctx.c.z + "px) rotateZ(" + ctx.c.y/300 * 90 + "deg) rotateX(" + ctx.c.y/100 * 90 + "deg) scale(" + ctx.c.s + ")");
     				set_style(span, "opacity", ctx.c.y / 20);
     			}
     		},
@@ -332,10 +332,10 @@ var app = (function () {
     			for (var i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			attr(h1, "class", "svelte-16wjkl6");
-    			add_location(h1, file, 101, 0, 1812);
-    			attr(div, "class", "threeD svelte-16wjkl6");
-    			add_location(div, file, 100, 0, 1791);
+    			attr(h1, "class", "svelte-lnfmp3");
+    			add_location(h1, file, 103, 0, 1864);
+    			attr(div, "class", "threeD svelte-lnfmp3");
+    			add_location(div, file, 102, 0, 1843);
     		},
 
     		l: function claim(nodes) {
@@ -421,7 +421,8 @@ var app = (function () {
     			return {
     				character: emoji[i % emoji.length] + characters[i % characters.length],
     				x: (Math.random() * 50) + 10,
-    				y: -20 - Math.random() * 400,
+    				y: -20 - Math.random() * 300,
+    				z: i++ * 14,
     				r: 0.2 + Math.random() * 0.5,
     				s: (Math.random() * 0.55) + 0.3,
     			};
@@ -436,7 +437,7 @@ var app = (function () {
 
     			$$invalidate('confetti', confetti = confetti.map(emoji => {
     				emoji.y += 0.7 * emoji.r;
-    				if (emoji.y > 90) emoji.y = -90;
+    				if (emoji.y > 130) emoji.y = -130;
     				return emoji;
     			}));
     		}

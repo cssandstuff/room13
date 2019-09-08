@@ -33,7 +33,8 @@
 			return {
 				character: emoji[i % emoji.length] + characters[i % characters.length],
 				x: (Math.random() * 50) + 10,
-				y: -20 - Math.random() * 400,
+				y: -20 - Math.random() * 300,
+				z: i++ * 14,
 				r: 0.2 + Math.random() * 0.5,
 				s: (Math.random() * 0.55) + 0.3,
 			};
@@ -48,7 +49,7 @@
 
 			confetti = confetti.map(emoji => {
 				emoji.y += 0.7 * emoji.r;
-				if (emoji.y > 90) emoji.y = -90;
+				if (emoji.y > 130) emoji.y = -130;
 				return emoji;
 			});
 		}
@@ -87,20 +88,21 @@
 		color: #000;
 		font-weight: 500;
 		padding: 1em;
-		z-index: 99;
+		z-index: 999;
 		left: 50%;
-		margin-left: -200px;
+		margin-left: -150px;
 		text-align: center;
 		top: 0;
 		margin-top: -15px;
 		position: absolute;
 		border-radius: 5px;
+		transform: translateZ(150px);
 	}
 </style>
 
 <div class="threeD">
 <h1>Thank You Room 13!</h1>
 {#each confetti as c}
-	<span style="transform: translateX({c.x}vw) translateY({c.y}vh) translateZ({c.y}vh) rotateZ({c.y/300 * 90}deg) rotateX({c.y/100 * 90}deg) scale({c.s}); opacity:{c.y / 20}">{c.character}</span>
+	<span style="transform: translateX({c.x}vw) translateY({c.y}vh) translateZ({c.z}px) rotateZ({c.y/300 * 90}deg) rotateX({c.y/100 * 90}deg) scale({c.s}); opacity:{c.y / 20}">{c.character}</span>
 {/each}
 </div>
