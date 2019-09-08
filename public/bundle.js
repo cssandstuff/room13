@@ -420,7 +420,7 @@ var app = (function () {
     		.map((_, i) => {
     			return {
     				character: emoji[i % emoji.length] + characters[i % characters.length],
-    				x: (Math.random() * 50) + 10,
+    				x: (Math.random() * 50) + 15,
     				y: -20 - Math.random() * 300,
     				z: i++ * 14,
     				r: 0.2 + Math.random() * 0.5,
