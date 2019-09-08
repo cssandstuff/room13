@@ -61,9 +61,13 @@
 </script>
 
 <style>
-	:global(body) {
+	:global(body, html) {
+		width: 100vw;
+		height: 100vh;
 		overflow: hidden;
 		background: rgb(146, 91, 128);
+	}
+	:global(body) {
 		font-family: 'Caveat', cursive;
 	}
 
