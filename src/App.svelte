@@ -61,9 +61,9 @@
 </script>
 
 <style>
-	:global(body, html) {
-		width: 100vw;
-		height: 100vh;
+	:global(html) {
+		width: 100%;
+		height: 100%;
 		overflow: hidden;
 		box-sizing: border-box;
 		padding: 0; margin: 0;
