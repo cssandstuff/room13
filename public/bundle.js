@@ -273,7 +273,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (105:0) {#each confetti as c}
+    // (111:0) {#each confetti as c}
     function create_each_block(ctx) {
     	var span, t_value = ctx.c.character + "", t;
 
@@ -283,8 +283,8 @@ var app = (function () {
     			t = text(t_value);
     			set_style(span, "transform", "translateX(" + ctx.c.x + "vw) translateY(" + ctx.c.y + "vh) translateZ(" + ctx.c.z + "px) rotateZ(" + ctx.c.y/300 * 90 + "deg) rotateX(" + ctx.c.y/100 * 90 + "deg) scale(" + ctx.c.s + ")");
     			set_style(span, "opacity", ctx.c.y / 20);
-    			attr(span, "class", "svelte-lnfmp3");
-    			add_location(span, file, 105, 1, 1915);
+    			attr(span, "class", "svelte-iuhgmc");
+    			add_location(span, file, 111, 1, 2025);
     		},
 
     		m: function mount(target, anchor) {
@@ -332,10 +332,10 @@ var app = (function () {
     			for (var i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			attr(h1, "class", "svelte-lnfmp3");
-    			add_location(h1, file, 103, 0, 1864);
-    			attr(div, "class", "threeD svelte-lnfmp3");
-    			add_location(div, file, 102, 0, 1843);
+    			attr(h1, "class", "svelte-iuhgmc");
+    			add_location(h1, file, 109, 0, 1974);
+    			attr(div, "class", "threeD svelte-iuhgmc");
+    			add_location(div, file, 108, 0, 1953);
     		},
 
     		l: function claim(nodes) {

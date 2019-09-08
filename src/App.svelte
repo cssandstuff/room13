@@ -65,6 +65,8 @@
 		width: 100vw;
 		height: 100vh;
 		overflow: hidden;
+		box-sizing: border-box;
+		padding: 0; margin: 0;
 		background: rgb(146, 91, 128);
 	}
 	:global(body) {
