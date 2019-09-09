@@ -273,7 +273,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (111:0) {#each confetti as c}
+    // (112:0) {#each confetti as c}
     function create_each_block(ctx) {
     	var span, t_value = ctx.c.character + "", t;
 
@@ -284,7 +284,7 @@ var app = (function () {
     			set_style(span, "transform", "translateX(" + ctx.c.x + "vw) translateY(" + ctx.c.y + "vh) translateZ(" + ctx.c.z + "px) rotateZ(" + ctx.c.y/300 * 90 + "deg) rotateX(" + ctx.c.y/100 * 90 + "deg) scale(" + ctx.c.s + ")");
     			set_style(span, "opacity", ctx.c.y / 20);
     			attr(span, "class", "svelte-1ujmgtf");
-    			add_location(span, file, 111, 1, 2019);
+    			add_location(span, file, 112, 1, 2049);
     		},
 
     		m: function mount(target, anchor) {
@@ -312,7 +312,7 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
-    	var div, h1, t_1;
+    	var div, h1, t0, br, t1, t2;
 
     	var each_value = ctx.confetti;
 
@@ -326,16 +326,19 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			h1 = element("h1");
-    			h1.textContent = "Thank You Room 13!";
-    			t_1 = space();
+    			t0 = text("Thank You Room 13,");
+    			br = element("br");
+    			t1 = text("\nyou guys rock! 😄🤘");
+    			t2 = space();
 
     			for (var i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
+    			add_location(br, file, 109, 22, 1995);
     			attr(h1, "class", "svelte-1ujmgtf");
-    			add_location(h1, file, 109, 0, 1968);
+    			add_location(h1, file, 109, 0, 1973);
     			attr(div, "class", "threeD svelte-1ujmgtf");
-    			add_location(div, file, 108, 0, 1947);
+    			add_location(div, file, 108, 0, 1952);
     		},
 
     		l: function claim(nodes) {
@@ -345,7 +348,10 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert(target, div, anchor);
     			append(div, h1);
-    			append(div, t_1);
+    			append(h1, t0);
+    			append(h1, br);
+    			append(h1, t1);
+    			append(div, t2);
 
     			for (var i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(div, null);
@@ -390,7 +396,7 @@ var app = (function () {
 
     function instance($$self, $$props, $$invalidate) {
     	let characters = [
-    		'Maja', 'Payton', 'Miss Quach',
+    		'Maja', 'Payton', 'Miss Quach✨🎉',
     		'Reef', 'Rylee', 'Noa',
     		'Sophie', 'Aayan', 'Olive',
     		'Abbie', 'Lucy', 'Cruz',
@@ -403,16 +409,16 @@ var app = (function () {
     		];
 
     	let emoji = [
-    		'🥳', '🎉', '✨',
-    		'🐠', '🤪', '❤️',
+    		'🥳', '🦊', '🙌✨',
+    		'🐠', '🤪', '🌈',
     		'🥺', '🚘', '😜',
-    		'🌸', '😘', '🙄',
-    		'🤩', '👍', '🦄',
-    		'👌', '🙌', '👏',
-    		'😋', '🐶', '🧙‍️',
+    		'🌸', '😘', '🤣',
+    		'🤩', '👻', '🦄',
+    		'😻', '🐶', '😈',
+    		'😋', '👾', '🧙‍️',
     		'🦁', '🐭', '😎',
     		'🤠', '🏅', '🏆',
-    		'⭐️',
+    		'🙊',
     		];
 
 

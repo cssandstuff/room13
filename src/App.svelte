@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 
 	let characters = [
-		'Maja', 'Payton', 'Miss Quach',
+		'Maja', 'Payton', 'Miss Quach✨🎉',
 		'Reef', 'Rylee', 'Noa',
 		'Sophie', 'Aayan', 'Olive',
 		'Abbie', 'Lucy', 'Cruz',
@@ -15,16 +15,16 @@
 		];
 
 	let emoji = [
-		'🥳', '🎉', '✨',
-		'🐠', '🤪', '❤️',
+		'🥳', '🦊', '🙌✨',
+		'🐠', '🤪', '🌈',
 		'🥺', '🚘', '😜',
-		'🌸', '😘', '🙄',
-		'🤩', '👍', '🦄',
-		'👌', '🙌', '👏',
-		'😋', '🐶', '🧙‍️',
+		'🌸', '😘', '🤣',
+		'🤩', '👻', '🦄',
+		'😻', '🐶', '😈',
+		'😋', '👾', '🧙‍️',
 		'🦁', '🐭', '😎',
 		'🤠', '🏅', '🏆',
-		'⭐️',
+		'🙊',
 		];
 
 
@@ -107,7 +107,8 @@
 </style>
 
 <div class="threeD">
-<h1>Thank You Room 13!</h1>
+<h1>Thank You Room 13,<br/>
+you guys rock! 😄🤘</h1>
 {#each confetti as c}
 	<span style="transform: translateX({c.x}vw) translateY({c.y}vh) translateZ({c.z}px) rotateZ({c.y/300 * 90}deg) rotateX({c.y/100 * 90}deg) scale({c.s}); opacity:{c.y / 20}">{c.character}</span>
 {/each}
