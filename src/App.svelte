@@ -49,14 +49,18 @@
 
 			confetti = confetti.map(emoji => {
 				emoji.y += 0.6 * emoji.r;
-				if (emoji.y > 130) emoji.y = -130;
+				if (emoji.y > 130) {
+					emoji.y = -60;
+				}
 				return emoji;
 			});
 		}
 
 		loop();
 
-		return () => cancelAnimationFrame(frame);
+		return () => {
+			cancelAnimationFrame(frame);
+		}
 	});
 </script>
 

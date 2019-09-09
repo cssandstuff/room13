@@ -273,7 +273,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (112:0) {#each confetti as c}
+    // (116:0) {#each confetti as c}
     function create_each_block(ctx) {
     	var span, t_value = ctx.c.character + "", t;
 
@@ -284,7 +284,7 @@ var app = (function () {
     			set_style(span, "transform", "translateX(" + ctx.c.x + "vw) translateY(" + ctx.c.y + "vh) translateZ(" + ctx.c.z + "px) rotateZ(" + ctx.c.y/300 * 90 + "deg) rotateX(" + ctx.c.y/100 * 90 + "deg) scale(" + ctx.c.s + ")");
     			set_style(span, "opacity", ctx.c.y / 20);
     			attr(span, "class", "svelte-1ujmgtf");
-    			add_location(span, file, 112, 1, 2049);
+    			add_location(span, file, 116, 1, 2070);
     		},
 
     		m: function mount(target, anchor) {
@@ -334,11 +334,11 @@ var app = (function () {
     			for (var i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
-    			add_location(br, file, 109, 22, 1995);
+    			add_location(br, file, 113, 22, 2016);
     			attr(h1, "class", "svelte-1ujmgtf");
-    			add_location(h1, file, 109, 0, 1973);
+    			add_location(h1, file, 113, 0, 1994);
     			attr(div, "class", "threeD svelte-1ujmgtf");
-    			add_location(div, file, 108, 0, 1952);
+    			add_location(div, file, 112, 0, 1973);
     		},
 
     		l: function claim(nodes) {
@@ -443,14 +443,18 @@ var app = (function () {
 
     			$$invalidate('confetti', confetti = confetti.map(emoji => {
     				emoji.y += 0.6 * emoji.r;
-    				if (emoji.y > 130) emoji.y = -130;
+    				if (emoji.y > 130) {
+    					emoji.y = -60;
+    				}
     				return emoji;
     			}));
     		}
 
     		loop();
 
-    		return () => cancelAnimationFrame(frame);
+    		return () => {
+    			cancelAnimationFrame(frame);
+    		}
     	});
 
     	return { confetti };
