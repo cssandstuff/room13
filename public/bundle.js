@@ -284,7 +284,7 @@ var app = (function () {
     			set_style(span, "transform", "translateX(" + ctx.c.x + "vw) translateY(" + ctx.c.y + "vh) translateZ(" + ctx.c.z + "px) rotateZ(" + ctx.c.y/300 * 90 + "deg) rotateX(" + ctx.c.y/100 * 90 + "deg) scale(" + ctx.c.s + ")");
     			set_style(span, "opacity", ctx.c.y / 20);
     			attr(span, "class", "svelte-1ujmgtf");
-    			add_location(span, file, 111, 1, 2017);
+    			add_location(span, file, 111, 1, 2019);
     		},
 
     		m: function mount(target, anchor) {
@@ -333,9 +333,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
     			attr(h1, "class", "svelte-1ujmgtf");
-    			add_location(h1, file, 109, 0, 1966);
+    			add_location(h1, file, 109, 0, 1968);
     			attr(div, "class", "threeD svelte-1ujmgtf");
-    			add_location(div, file, 108, 0, 1945);
+    			add_location(div, file, 108, 0, 1947);
     		},
 
     		l: function claim(nodes) {
@@ -392,7 +392,7 @@ var app = (function () {
     	let characters = [
     		'Maja', 'Payton', 'Miss Quach',
     		'Reef', 'Rylee', 'Noa',
-    		'Sophie', 'Aayah', 'Olive',
+    		'Sophie', 'Aayan', 'Olive',
     		'Abbie', 'Lucy', 'Cruz',
     		'Benson', 'Zion', 'Ariyah',
     		'Milly', 'Shekinah', 'Onyx',
@@ -405,13 +405,13 @@ var app = (function () {
     	let emoji = [
     		'🥳', '🎉', '✨',
     		'🐠', '🤪', '❤️',
-    		'🥺', '😻', '😜',
-    		'😎', '😘', '🙄',
-    		'🤩', '👍', '🤟',
+    		'🥺', '🚘', '😜',
+    		'🌸', '😘', '🙄',
+    		'🤩', '👍', '🦄',
     		'👌', '🙌', '👏',
-    		'😋', '🐶', '🐹',
-    		'🦁', '🐭', '🤓',
-    		'🌸', '🏅', '🏆',
+    		'😋', '🐶', '🧙‍️',
+    		'🦁', '🐭', '😎',
+    		'🤠', '🏅', '🏆',
     		'⭐️',
     		];
 
